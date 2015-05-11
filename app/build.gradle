@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 'Google Inc.:Google APIs:8'
+    compileSdkVersion 17
     buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.androidhive.pushnotifications"
-        minSdkVersion 8
+        minSdkVersion 11
         targetSdkVersion 16
     }
 

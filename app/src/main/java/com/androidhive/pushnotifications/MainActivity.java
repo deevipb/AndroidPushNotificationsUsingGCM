@@ -1,11 +1,10 @@
 package com.androidhive.pushnotifications;
 
-import static com.androidhive.pushnotifications.CommonUtilities.DISPLAY_MESSAGE_ACTION;
-import static com.androidhive.pushnotifications.CommonUtilities.EXTRA_MESSAGE;
-import static com.androidhive.pushnotifications.CommonUtilities.SENDER_ID;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.AsyncTask;
@@ -13,10 +12,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 
 import com.google.android.gcm.GCMRegistrar;
+
+import static com.androidhive.pushnotifications.CommonUtilities.DISPLAY_MESSAGE_ACTION;
+import static com.androidhive.pushnotifications.CommonUtilities.EXTRA_MESSAGE;
+import static com.androidhive.pushnotifications.CommonUtilities.SENDER_ID;
 
 public class MainActivity extends Activity {
 	// label to display gcm messages
@@ -130,7 +131,7 @@ public class MainActivity extends Activity {
             Intent i = new Intent(context, View.class);
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
-
+*/
 
 
 

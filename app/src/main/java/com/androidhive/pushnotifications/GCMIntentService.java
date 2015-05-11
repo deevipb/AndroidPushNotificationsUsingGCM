@@ -1,7 +1,5 @@
 package com.androidhive.pushnotifications;
 
-import static com.androidhive.pushnotifications.CommonUtilities.SENDER_ID;
-import static com.androidhive.pushnotifications.CommonUtilities.displayMessage;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -10,6 +8,9 @@ import android.content.Intent;
 import android.util.Log;
 
 import com.google.android.gcm.GCMBaseIntentService;
+
+import static com.androidhive.pushnotifications.CommonUtilities.SENDER_ID;
+import static com.androidhive.pushnotifications.CommonUtilities.displayMessage;
 
 public class GCMIntentService extends GCMBaseIntentService {
 
@@ -48,8 +49,19 @@ public class GCMIntentService extends GCMBaseIntentService {
         Log.i(TAG, "Received message");
         String message = intent.getExtras().getString("price");
         
-        displayMessage(context, message);
+        //displayMessage(context, message);
         // notifies user
+       // generateNotification(context, message);
+
+        Log.i(TAG, "new message= ");
+        //String message = intent.getExtras().getString("message");
+        Intent i = new Intent(context,Open_dialog_GCM.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        i.putExtra("message", message);
+        //setKey_MSG(message);
+        //i.putExtra("Username", message);
+        context.startActivity(i);
+        message="PlayBasis";
         generateNotification(context, message);
     }
 
