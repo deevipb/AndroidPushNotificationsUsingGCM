@@ -91,14 +91,18 @@
             android:label=""
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
         </activity>
-         <activity
-         android:name=".setup"
-         android:label="Playbasis" >
-         </activity>
-        <!--<activity-->
-            <!--android:name=".Login"-->
-            <!--android:label="@string/title_activity_login" >-->
-        <!--</activity>-->
+        <activity
+            android:name=".setup"
+            android:label="Playbasis" >
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".Login" -->
+        <!-- android:label="@string/title_activity_login" > -->
+        <!-- </activity> -->
+        <activity
+            android:name=".Allow"
+            android:label="@string/title_activity_allow" >
+        </activity>
     </application>
 
 </manifest>

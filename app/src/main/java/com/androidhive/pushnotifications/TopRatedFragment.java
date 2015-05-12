@@ -3,6 +3,7 @@ package com.androidhive.pushnotifications;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,9 +29,9 @@ public class TopRatedFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.fragment_top_rated, container, false);
         arrayList = new ArrayList<String>();
         arrayList.add("Github");
-        arrayList.add("Dorpbox");
-        arrayList.add("Line");
-        arrayList.add("Text");
+//        arrayList.add("Dorpbox");
+//        arrayList.add("Line");
+//        arrayList.add("Text");
 
         setup_txtUsername = (TextView)rootView.findViewById(R.id.setup_txtUsername);
         setup_txtUsername.setText("Username: "+setup.User);
@@ -116,6 +117,7 @@ public class TopRatedFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 dialogbox.dismiss();
+
                // finish();
             }
         });
@@ -124,7 +126,9 @@ public class TopRatedFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 dialogbox.dismiss();
-
+                Intent myIntent = new Intent(getActivity(), Allow.class);
+                //myIntent.putExtra("UserLogin", txtUser.getText().toString()); //Optional parameters
+                startActivity(myIntent);
                // finish();
 //				if(separated[0].equals("1")){
 //					finish();
