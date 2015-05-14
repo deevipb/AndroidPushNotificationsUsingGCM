@@ -103,6 +103,22 @@
             android:name=".Allow"
             android:label="@string/title_activity_allow" >
         </activity>
+        <activity
+            android:name=".Dash_login"
+            android:label="@string/title_activity_dash_login" >
+        </activity>
+        <activity
+            android:name=".Dash_login_detail"
+            android:label="@string/title_activity_dash_login_detail" >
+        </activity>
+        <activity
+            android:name=".Dash_login_sosial"
+            android:label="@string/title_activity_dash_login_sosial" >
+        </activity>
+        <activity
+            android:name=".Terms"
+            android:label="@string/title_activity_terms" >
+        </activity>
     </application>
 
 </manifest>

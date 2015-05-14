@@ -28,4 +28,8 @@
     <string name="on_off">On/Off</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_allow">Allow</string>
+    <string name="title_activity_dash_login">Dash_login</string>
+    <string name="title_activity_dash_login_detail">Dash_login_detail</string>
+    <string name="title_activity_dash_login_sosial">Dash_login_sosial</string>
+    <string name="title_activity_terms">Terms</string>
 </resources>

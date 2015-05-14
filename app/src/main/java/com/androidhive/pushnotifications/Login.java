@@ -93,13 +93,14 @@ public class Login extends Activity {
         btn.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
-                if (txtUser.getText().toString().length() <= 0) {
-                    return;
-                }
+                test();
+//                if (txtUser.getText().toString().length() <= 0) {
+//                    return;
+//                }
 //
                 //new DownloadJSONFileAsync().execute();
 
-                new DownloadJSONFileAsync2().execute();
+                //new DownloadJSONFileAsync2().execute();
 
 
                 //HttpClient client = new DefaultHttpClient();
@@ -127,7 +128,78 @@ public class Login extends Activity {
         });
 
     }
+public void test(){
+    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
+    StrictMode.setThreadPolicy(policy);
+
+    //String password= AccountManager.get(mContext).getPassword(account);
+    //Authorization auth=null;
+//    try {
+//        GitHubClient client=new GitHubClient();
+//        client.setUserAgent(USER_AGENT_STRING);
+//        client.setCredentials(account.name,password);
+//        OAuthService service=new OAuthService(client);
+//        for (    Authorization a : service.getAuthorizations()) {
+//            if (a != null && a.getNote() != null) {
+//                if (a.getNote().equals(DESCRIPTION_CLIENT)) {
+//                    auth=a;
+//                }
+//            }
+//        }
+//        if (auth == null) {
+//            auth=new Authorization();
+//            auth.setNote(DESCRIPTION_CLIENT);
+//            auth.setNoteUrl(CLIENT_URL);
+//            List<String> scopes=new ArrayList<String>();
+//            scopes.add("user");
+//            scopes.add("repo");
+//            scopes.add("gist");
+//            auth.setScopes(scopes);
+//            auth=service.createAuthorization(auth);
+//        }
+//    }
+//    catch (  IOException e) {
+//        System.out.println();
+//        //throw new NetworkErrorException(e);
+//    }
+    //String oauthToken=auth.getToken();
+
+//    GitHubClient client = new GitHubClient();
+//    client.setCredentials("sakchai.c@playbasis.com", "MyPayLogin@123");
+//    OAuthService oauthService = new OAuthService();
+//    try {
+//    // Replace with actual login and password
+//    oauthService.getClient().setCredentials("sakchai.c@playbasis.com", "MyPayLogin@123");
+//
+//    // Create authorization with 'gist' scope only
+//    Authorization auth = new Authorization();
+//        auth.addScopes(1,"");
+//    auth.setScopes(Arrays.asList("user","repo","admin:repo_hook"));
+//        //auth.setApp(Login.this);
+//
+//
+//
+//    auth = oauthService.createAuthorization(auth);
+//System.out.println(auth.getToken());
+    // Create Gist service configured with OAuth2 token
+//    GistService gistService = new GistService();
+//    gistService.getClient().setOAuth2Token(auth.getToken());
+//
+//    // Create Gist
+//    Gist gist = new Gist();
+//    gist.setPublic(false);
+//    gist.setDescription("Created using OAuth2 token via Java API");
+//    GistFile file = new GistFile();
+//    file.setContent("Gist!");
+//    file.setFilename("gist.txt");
+//    gist.setFiles(Collections.singletonMap(file.getFilename(), file));
+//    gist = gistService.createGist(gist);
+//    System.out.println("Created Gist at " + gist.getHtmlUrl());
+    //} catch (IOException e) {
+    //    System.out.println(e+"");
+    //}
+}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
